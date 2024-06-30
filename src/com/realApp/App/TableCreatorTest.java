@@ -206,15 +206,6 @@ public class TableCreatorTest {
             createTable(connection, MyTable1.class);
         }
 
-//        for (int i = 0; i < 20; i++) {
-//            String name = "MrBlack no." + i;
-//            String surname = "Handsome no." + i;
-//            String phone = new StringBuilder().append(new Random().nextInt(90000) + 10000).toString();
-//
-//            var newRecord = new MyTable1(i, name, surname, phone);
-//            insertNewRecord(connection, newRecord);
-//        }
-
         var allResults = getRowsFromBase(connection, MyTable1.class);
 
         for (MyTable1 row: allResults) {
